@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  svc.webapi:
+    image: svc.webapi
+    build:
+      context: ./SVC.WebAPI
+      dockerfile: Dockerfile

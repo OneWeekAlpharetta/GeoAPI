@@ -11,7 +11,7 @@ namespace SVC.Lib.Repos
 
         public HealthRepository()
         {
-            _db = new fy18oneweekContext();
+            _db = new fy18oneweekContext("");
         }
 
         public IEnumerable<Providers> List => _db.Providers;

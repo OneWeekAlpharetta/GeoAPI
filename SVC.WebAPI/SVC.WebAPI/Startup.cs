@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using SVC.WebAPI.Models;
+using SVC.Lib.Services;
 
 namespace SVC.WebAPI
 {
@@ -30,6 +31,8 @@ namespace SVC.WebAPI
         {
             services.Configure<AppSettings>(Configuration.GetSection("ApplicationSettings"));
             services.AddOptions();
+
+            services.AddTransient<IAddressSvc, AddressSvc>();
 
             // Add framework services.
             services.AddMvc();

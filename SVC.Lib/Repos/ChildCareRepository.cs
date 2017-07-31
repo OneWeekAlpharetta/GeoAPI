@@ -9,9 +9,9 @@ namespace SVC.Lib.Repos
     {
         public readonly fy18oneweekContext _db;
 
-        public ChildCareRepository()
+        public ChildCareRepository(string conn)
         {
-            _db = new fy18oneweekContext("");
+            _db = new fy18oneweekContext(conn);
         }
 
         public IEnumerable<Childcareproviders> List => _db.Childcareproviders;

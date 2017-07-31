@@ -9,9 +9,9 @@ namespace SVC.Lib.Repos
     {
         public readonly fy18oneweekContext _db;
 
-        public HealthRepository()
+        public HealthRepository(String conn)
         {
-            _db = new fy18oneweekContext("");
+            _db = new fy18oneweekContext(conn);
         }
 
         public IEnumerable<Providers> List => _db.Providers;
